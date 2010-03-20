@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using MACSkeptic.ExpLorer.Utils.Extensions;
+using MACSkeptic.Commons.Extensions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace MACSkeptic.ExpLorer.Tests.Utils.Extensions
+namespace MACSkeptic.Commons.Tests.Extensions
 {
     [TestClass]
     public class EnumerableExtensionsTest
@@ -14,7 +14,7 @@ namespace MACSkeptic.ExpLorer.Tests.Utils.Extensions
         {
             var counter = 0;
             var action = new Action<string>(x => counter++);
-            new[] {"macskeptic", ";)"}.ExecuteForEach(action);
+            new[] {"macskeptic", ";)"}.Each(action);
             Assert.AreEqual(2, counter);
         }
 
@@ -23,7 +23,7 @@ namespace MACSkeptic.ExpLorer.Tests.Utils.Extensions
         {
             var counter = 0;
             var action = new Action<string>(x => counter++);
-            new string[] {}.ExecuteForEach(action);
+            new string[] {}.Each(action);
             Assert.AreEqual(0, counter);
         }
 
@@ -48,7 +48,9 @@ namespace MACSkeptic.ExpLorer.Tests.Utils.Extensions
         [TestMethod]
         public void ShouldJoinAsStringGivenASeparator()
         {
-            Assert.AreEqual("macskeptic, ;), !", new[] {"macskeptic", ";)", "!"}.JoinAsString(", "));
+            Assert.AreEqual(
+                "macskeptic, ;), !",
+                new[] {"macskeptic", ";)", "!"}.JoinAsString(", "));
         }
 
         [TestMethod]
@@ -58,7 +60,9 @@ namespace MACSkeptic.ExpLorer.Tests.Utils.Extensions
 ;),
 !";
 
-            Assert.AreEqual(expected, new[] {"macskeptic", ";)", "!"}.JoinAsString(",", true));
+            Assert.AreEqual(
+                expected,
+                new[] {"macskeptic", ";)", "!"}.JoinAsString(",", true));
         }
     }
 }

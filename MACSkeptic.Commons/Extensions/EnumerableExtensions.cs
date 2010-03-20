@@ -3,11 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 
-namespace MACSkeptic.ExpLorer.Utils.Extensions
+namespace MACSkeptic.Commons.Extensions
 {
-    internal static class EnumerableExtensions
+    public static class EnumerableExtensions
     {
-        internal static void ExecuteForEach<T>(this IEnumerable<T> @collection, Action<T> action)
+        public static void Each<T>(this IEnumerable<T> @collection, Action<T> action)
         {
             if (@collection == null ||
                 action == null)
@@ -21,7 +21,7 @@ namespace MACSkeptic.ExpLorer.Utils.Extensions
             }
         }
 
-        internal static bool IsEmpty(this IEnumerable @collection)
+        public static bool IsEmpty(this IEnumerable @collection)
         {
             if (@collection == null)
             {
@@ -31,7 +31,7 @@ namespace MACSkeptic.ExpLorer.Utils.Extensions
             return !@collection.GetEnumerator().MoveNext();
         }
 
-        internal static string JoinAsString(this IEnumerable @collection, string separator, bool oneItemPerLine)
+        public static string JoinAsString(this IEnumerable @collection, string separator, bool oneItemPerLine)
         {
             if (@collection.IsEmpty())
             {
@@ -58,7 +58,7 @@ namespace MACSkeptic.ExpLorer.Utils.Extensions
             return builder.ToString();
         }
 
-        internal static string JoinAsString(this IEnumerable @collection, string separator)
+        public static string JoinAsString(this IEnumerable @collection, string separator)
         {
             return @collection.JoinAsString(separator, false);
         }

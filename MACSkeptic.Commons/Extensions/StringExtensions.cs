@@ -2,11 +2,11 @@
 using System.Reflection;
 using System.Text.RegularExpressions;
 
-namespace MACSkeptic.ExpLorer.Utils.Extensions
+namespace MACSkeptic.Commons.Extensions
 {
-    internal static class StringExtensions
+    public static class StringExtensions
     {
-        internal static string ApplyArguments(this string @string, object arguments)
+        public static string Apply(this string @string, object arguments)
         {
             if (@string.IsEmpty())
             {
@@ -42,7 +42,7 @@ namespace MACSkeptic.ExpLorer.Utils.Extensions
                        .GetValue(arguments, null) as string;
         }
 
-        internal static bool IsEmpty(this string @string)
+        public static bool IsEmpty(this string @string)
         {
             return string.IsNullOrEmpty(@string);
         }

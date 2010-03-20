@@ -1,7 +1,7 @@
-﻿using MACSkeptic.ExpLorer.Utils.Extensions;
+﻿using MACSkeptic.Commons.Extensions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace MACSkeptic.ExpLorer.Tests.Utils.Extensions
+namespace MACSkeptic.Commons.Tests.Extensions
 {
     [TestClass]
     public class StringExtensionsTest
@@ -9,7 +9,7 @@ namespace MACSkeptic.ExpLorer.Tests.Utils.Extensions
         [TestMethod]
         public void ShouldProperlyApplyArgumentsToAString()
         {
-            Assert.AreEqual("macskeptic ;)!", "macskeptic #{wink}#{bang}".ApplyArguments(new {wink = ";)", bang = "!"}));
+            Assert.AreEqual("macskeptic ;)!", "macskeptic #{wink}#{bang}".Apply(new {wink = ";)", bang = "!"}));
         }
 
         [TestMethod]
