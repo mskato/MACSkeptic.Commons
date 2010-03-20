@@ -1,0 +1,15 @@
+bin
+obj
+_Re*/**
+**/*.cache
+**/*~
+**/*.stack*
+TestR*
+**/*.suo
+**/*.user
+**/*.swp
+*.suo*
+*.stack*
+*.user
+*.resharper*
+*.cache*
