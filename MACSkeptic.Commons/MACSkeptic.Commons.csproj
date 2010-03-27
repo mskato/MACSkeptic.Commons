@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.30729</ProductVersion>
+    <ProductVersion>9.0.21022</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{7C2EFF04-F1F4-4B99-885B-BFF8BE3F079D}</ProjectGuid>
     <OutputType>Library</OutputType>
@@ -45,6 +45,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Extensions\ObjectExtensions.cs" />
+    <Compile Include="Matchers\InstanceOfMatcher.cs" />
+    <Compile Include="Matchers\IMatcher.cs" />
+    <Compile Include="Matchers\EmptyMatcher.cs" />
+    <Compile Include="Matchers\EqualsMatcher.cs" />
+    <Compile Include="Matchers\SameMatcher.cs" />
+    <Compile Include="Matchers\NullMatcher.cs" />
+    <Compile Include="Expectations\ShouldIStayOrShouldIGo.cs" />
     <Compile Include="Extensions\EnumerableExtensions.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="Language\Case.cs" />
