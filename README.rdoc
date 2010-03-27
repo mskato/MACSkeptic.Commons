@@ -1,0 +1,59 @@
+= MACSkeptic.ExpLorer
+
+* http://github.com/MACSkeptic/Explorer
+
+== DESCRIPTION:
+
+Library for reading/parsing chains of lore/tale configuration files
+
+== FEATURES/PROBLEMS:
+  
+  * Parse lore/tale file chains
+  * Dynamicaly creates proxies for interfaces based on a configuration chain
+
+== SYNOPSIS:
+
+  // As of v1.1.0 it is recommended that the 'Sage' class should be used as the main entry point
+  var sage = new Sage(new CoffeeConfigurationParser(), new ConfigurationProxyProvider());
+  var proxy = sage.CreateProxy<IConfiguration>();
+  Assert.AreEqual("42", proxy.Answer);
+  
+
+== REQUIREMENTS:
+
+  Castle Proxy
+  Castle Core
+  MSTest (to run the test project)
+
+== INSTALL:
+
+  Add a reference to MACSkeptic.ExpLorer.dll
+
+== LICENSE:
+
+(The MIT License)
+
+MACSkeptic ExpLorer Library v1.0
+
+Copyright (c) 2010 Mozair Alves do Carmo Junior, http://codevil.com/
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+"Software"), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+Date: 2010-02-21 08:11:01 -0300 (Sun, 21 Feb 2010)
