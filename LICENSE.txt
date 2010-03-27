@@ -1,4 +1,4 @@
-MACSkeptic ExpLorer Library v1.0
+MACSkeptic.Commons Library v1.0
 
 Copyright (c) 2010 Mozair Alves do Carmo Junior, http://codevil.com/
 

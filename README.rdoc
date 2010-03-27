@@ -1,39 +1,42 @@
-= MACSkeptic.ExpLorer
+= MACSkeptic.Commons
 
-* http://github.com/MACSkeptic/Explorer
+* http://github.com/MACSkeptic/MACSkeptic.Commons
+
+== AUTHOR
+
+  * MACSkeptic - http://github.com/MACSkeptic
+  ** Special thanks to Diego Feitosa - http://github.com/dnfeitosa
 
 == DESCRIPTION:
 
-Library for reading/parsing chains of lore/tale configuration files
+Short, smart and simple addittions to c# applicatiions.
 
 == FEATURES/PROBLEMS:
   
-  * Parse lore/tale file chains
-  * Dynamicaly creates proxies for interfaces based on a configuration chain
+  * Extensions for strings (IsEmpty, Apply(annonymous object))
+  * Extensions for collections (IsEmpty, JoinAsString)
+  * Fluent language for matchers/expectations
+  * Fluent language for non-constant switch statement
 
 == SYNOPSIS:
 
-  // As of v1.1.0 it is recommended that the 'Sage' class should be used as the main entry point
-  var sage = new Sage(new CoffeeConfigurationParser(), new ConfigurationProxyProvider());
-  var proxy = sage.CreateProxy<IConfiguration>();
-  Assert.AreEqual("42", proxy.Answer);
-  
+  "acassdasd".IsEmpty(); //false
+  "".IsEmpty(); //true
+  ((string)null).IsEmpty(); //true
 
 == REQUIREMENTS:
 
-  Castle Proxy
-  Castle Core
   MSTest (to run the test project)
 
 == INSTALL:
 
-  Add a reference to MACSkeptic.ExpLorer.dll
+  Add a reference to MACSkeptic.Commons.dll
 
 == LICENSE:
 
 (The MIT License)
 
-MACSkeptic ExpLorer Library v1.0
+MACSkeptic.Commons Library v1.0
 
 Copyright (c) 2010 Mozair Alves do Carmo Junior, http://codevil.com/
 
